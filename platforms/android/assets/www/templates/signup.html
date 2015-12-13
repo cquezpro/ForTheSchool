@@ -1,0 +1,25 @@
+<ion-view view-title="Signup">
+    <ion-content>
+
+        <article id="signup">
+            <section>
+                <h1>Sign Up <a data-icon="&#x4d;" class="show-home" href="#/home"></a></h1>
+                <form name="registerForm">
+                    <a href="" class="btn-facebook"><span data-icon="&#xe093;"></span> Connect with <span>Facebook</span></a>
+                    <div class="divider"><span>OR</span></div>
+                    <div class="">
+                        <input id="RegisterNameField" type="text" placeholder="Your Name" required/>
+                        <input id="RegisterEmailField" type="email" placeholder="Email Address" required/>
+                        <input id="RegisterPasswordField" type="password" placeholder="Password" required/>
+                        <a href="" class="button button-positive button-helper" ng-click="signup();">Sign Up</a>
+                        <span class="form-error">{{ failureMsg }}</span>
+                    </div>
+                </form>
+                <div class="cta-bottom">
+                    <a href="#/login" class="btn-gray show-login">HAVE AN ACCOUNT?  LOG IN</a>
+                </div>
+            </section>
+        </article>
+
+    </ion-content>
+</ion-view>

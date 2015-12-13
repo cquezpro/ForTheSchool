@@ -1,0 +1,84 @@
+<ion-view title='<img class="title-image" src="img/logo.png" />'>
+    <ion-content class="padding">
+        
+        <div class="list card">
+            <div class="item item-divider">Total Pending ${{pendingTotal}}</div>
+            <div class="item item-body">
+                <span ng-hide="pendingTotal > 0">No pending transactions</span>
+                <table ng-show="pendingTotal > 0">
+                    <tr>
+                        <th>Date</th>
+                        <th>Store</th>
+                        <th>Amount</th>
+                    </tr>
+                    <tr ng-repeat="p in pending" class="earnings-table">
+                        <td>{{p.time}}</td>
+                        <td>{{p.store_name}}</td>
+                        <td>${{p.amount}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="list card">
+            <div class="item item-divider">Total Due ${{dueTotal}}</div>
+            <div class="item item-body">
+                <span ng-hide="dueTotal > 0">No payments due</span>
+                <table ng-show="dueTotal > 0">
+                    <tr>
+                        <th>Date</th>
+                        <th>Store</th>
+                        <th>Amount</th>
+                    </tr>
+                    <tr ng-repeat="p in due" class="earnings-table">
+                        <td>{{p.time}}</td>
+                        <td>{{p.store_name}}</td>
+                        <td>{{p.amount}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div class="list card">
+            <div class="item item-divider">Total Paid ${{paidTotal}}</div>
+            <div class="item item-body">
+                <span ng-hide="paidTotal > 0">You haven't received any payments</span>
+                <table ng-show="paidTotal > 0">
+                    <tr>
+                        <th>Date</th>
+                        <th>Store</th>
+                        <th>Amount</th>
+                    </tr>
+                    <tr ng-repeat="p in paid" class="earnings-table">
+                        <td>{{p.time}}</td>
+                        <td>{{p.store_name}}</td>
+                        <td>{{p.amount}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div class="list card">
+            <div class="item item-divider">Total Contributed ${{contributedTotal}}</div>
+            <div class="item item-body">
+                <span ng-hide="contributedTotal > 0">No contributions</span>
+                <table ng-show="contributedTotal > 0">
+                    <tr>
+                        <th>Date</th>
+                        <th>Store</th>
+                        <th>Amount</th>
+                    </tr>
+                    <tr ng-repeat="p in contributed" class="earnings-table">
+                        <td>{{p.time}}</td>
+                        <td>{{p.store_name}}</td>
+                        <td>{{p.amount}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+    </ion-content>
+</ion-view>
+
+
+

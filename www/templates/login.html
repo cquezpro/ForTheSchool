@@ -1,0 +1,23 @@
+<ion-view view-title="Login">
+    <ion-content style="background: white;">
+
+        <article id="login">
+            <section>
+                <h1>Login <a data-icon="&#x4d;" class="show-home" href="#/home"></a></h1>
+                <form name="loginForm">
+                    <a href="" class="btn-facebook" ng-click="facebookLogin()"><span data-icon="&#xe093;"></span> Connect with <span>Facebook</span></a>
+                    <div class="divider"><span>OR</span></div>
+                    <div class="">
+                        
+                        <input id="LoginEmailField" type="email" name="email" ng-model="user.email" placeholder="Email Address" required/>
+                        <input id="LoginPasswordField" type="password" name="password" ng-model="user.password" placeholder="Password" required/>
+                        <a href="" class="button button-positive button-helper" ng-click="submitted=true; login(user)">Login</a>
+                        <span class="form-error">{{ failureMsg }}</span>
+                        
+                    </div>
+                </form>
+            </section>
+        </article>
+
+    </ion-content>
+</ion-view>

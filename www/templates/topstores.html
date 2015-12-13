@@ -1,0 +1,17 @@
+<ion-view title='<img class="title-image" src="img/logo.png" />'>
+    <ion-content>
+        
+        <article id="secundary">
+            <h2>Top Stores</h2>
+            <ul id="square-list">
+                <li ng-repeat="s in topStores">
+                    <a class="square" ng-click="showStore({{s}});">
+                        <img src="{{s.image}}" alt="{{s.store_name}}">
+                        <p>{{s.discount_print}}</p>
+                    </a>
+                </li>
+            </ul>
+        </article>
+        
+    </ion-content>
+</ion-view>

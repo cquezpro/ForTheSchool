@@ -1,0 +1,39 @@
+<ion-view title='<img class="title-image" src="img/logo.png" />'>
+    <ion-tabs class="tabs-icon-top tabs-color-active-positive">
+    
+      <ion-tab title="Favorites" icon-off="ion-ios7-star-outline" icon-on="ion-ios7-star" ui-sref="menu.tabs.favorites">
+        <ion-nav-view name="favorites-tab"></ion-nav-view>
+      </ion-tab>
+
+      <ion-tab title="Top Stores" icon-off="ion-bag" icon-on="ion-bag" ui-sref="menu.tabs.topstores">
+        <ion-nav-view name="topstores-tab"></ion-nav-view>
+      </ion-tab>
+
+      <ion-tab title="Share" icon-off="ion-ios7-people-outline" icon-on="ion-ios7-people" ui-sref="menu.tabs.share">
+        <ion-nav-view name="share-tab"></ion-nav-view>
+      </ion-tab>
+
+      <ion-tab title="Search" icon-off="ion-ios7-search" icon-on="ion-ios7-search-strong" ui-sref="menu.tabs.search">
+        <ion-nav-view name="search-tab"></ion-nav-view>
+      </ion-tab>
+        
+      <!--   hidden tabs   -->
+        
+      <ion-tab title="Earnings" icon-off="ion-ios7-search" icon-on="ion-ios7-search-strong" ui-sref="menu.tabs.earnings" hidden="true">
+        <ion-nav-view name="earnings-tab"></ion-nav-view>
+      </ion-tab>
+        
+      <ion-tab title="Update" icon-off="ion-ios7-search" icon-on="ion-ios7-search-strong" ui-sref="menu.tabs.update" hidden="true">
+        <ion-nav-view name="update-tab"></ion-nav-view>
+      </ion-tab>
+        
+      <ion-tab title="FAQs" icon-off="ion-ios7-search" icon-on="ion-ios7-search-strong" ui-sref="menu.tabs.faqs" hidden="true">
+        <ion-nav-view name="faqs-tab"></ion-nav-view>
+      </ion-tab>
+        
+      <ion-tab title="Schools" icon-off="ion-ios7-search" icon-on="ion-ios7-search-strong" ui-sref="menu.tabs.schools" hidden="true">
+        <ion-nav-view name="schools-tab"></ion-nav-view>
+      </ion-tab>
+        
+    </ion-tabs>
+</ion-view>

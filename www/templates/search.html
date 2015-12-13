@@ -1,0 +1,64 @@
+<ion-view title='<img class="title-image" src="img/logo.png" />'>
+    <ion-content class="padding">
+          <article id="secundary">
+              
+            <section id="search">
+              <form>
+                <div class="form-control">
+                  <span class="form-icon" data-icon="&#x55;"></span>
+                  <input type="search" ng-model="searchfor" ng-change="search(searchfor)" placeholder="Search for a Store">
+                </div>
+              </form>
+            </section>
+
+            <div class="button-bar" style="margin-top:20px;">
+                <a class="button button-positive button-stores" ng-click="storesFilter(searchfor);">Stores</a>
+                <a class="button button-stable button-offers" ng-click="offersFilter(searchfor);">Offers</a>
+            </div>
+            
+            <h2 ng-show="list.length">Results: </h2>
+
+            <ul ng-show="list.length" id="square-list">
+                <li ng-repeat="l in list">
+                    <a class="square" ng-click="showStore({{l}});">
+                        <img src="{{l.image}}" alt="{{l.store_name}}">
+                        <p>{{l.discount_print}}</p>
+                    </a>
+                </li>
+            </ul>
+
+            <h2 ng-show="deals.length">Results: </h2>
+            
+            <article id="deals-results" ng-show="deals.length">
+                <ul id="menu-deals">
+                    <li ng-repeat="deal in deals">
+                        <div class="deal-title">
+                            <span class="deal-icon deal-icon-search" data-icon="&#xe017;"></span>
+                            <h2 class="toph2">{{deal.name}}</h2>
+                        </div>
+                        <p class="deal-exp" style="padding-top:5px;text-align:center;">{{deal.coupon}}</p>
+                        <a class="button button-assertive button-helper" ng-click="showDeal({{deal}})" style="margin-bottom:10px;">Shop Now</a>
+                    </li>
+                </ul>
+            </article>
+              
+<!--
+            <div class="divider"></div>
+
+            <h3 class="toph3">If you didnt find what youre looking for</h3>
+            <h2 class="toph2">Browse the store categories</h2>
+
+            <ul id="menu-links">
+                <li><a href="">Car Parts <span data-icon="&#x35;"></span></a></li>
+                <li><a href="">Clothes <span data-icon="&#x35;"></span></a></li>
+                <li><a href="">Computers <span data-icon="&#x35;"></span></a></li>
+                <li><a href="">Fashion <span data-icon="&#x35;"></span></a></li>
+                <li><a href="">Garden <span data-icon="&#x35;"></span></a></li>
+                <li><a href="">Home <span data-icon="&#x35;"></span></a></li>
+                <li><a href="">TV <span data-icon="&#x35;"></span></a></li>
+            </ul>
+-->
+
+          </article>
+    </ion-content>
+</ion-view>

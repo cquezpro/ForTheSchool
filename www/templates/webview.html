@@ -1,0 +1,50 @@
+<article id="screen" style="height:100%;">
+    <header>
+        <a ng-click="close();" class="header-left" data-icon="&#x4d;"></a>
+        <p class="header-center "><span class="store-name">{{store.store_name}}</span> </p>
+        <a ng-click="toggleRight();" class="header-right tag">{{deals_print}}</a>
+    </header>
+    <div data-role="content">
+        <div id="couponsList">
+            <ul data-role="listview" id="coupons"></ul>
+        </div>
+    </div>
+    <nav id="store">
+        <ul>
+            <li><a ng-click="back(); $(this).addClass('ui-disabled');" class="ui-disabled"><span data-icon="&#x34;"></span></a></li>
+            <li><a ng-click="forward(); $(this).addClass('ui-disabled')" class="ui-disabled"><span data-icon="&#x35;"></span></a></li>
+            <li id="openWeb" style="margin-top:5px;">
+                <a ng-click="openWebBrowser();">
+                    <i style="font-size: 40px;" class="icon ion-ios7-upload-outline"></i>
+                </a>
+            </li>            
+            <li id="favorite"><a ng-click="favorite();"><span data-icon="&#xe031;"></span></a></li>
+        </ul>
+    </nav>
+</article>
+
+<article id="favoritesModal" style="display:none;">
+    <section>
+        <a id="closeFavoritesModal" data-icon="&#x4d;"></a>
+        <span class="icon-big" data-icon="&#xe031;"></span>
+        <h3>Congratulations!</h3>
+        <p><span class="webViewStoreName"></span> is now a favorite store</p>
+    </section>
+</article>
+
+<article id="menu-right">
+    <div class="grad"></div>
+    <h3 class="toph3">{{store.store_name}}</h3>
+    <h2 class="toph2">{{store.discount_print}}</h2>
+    <div class="divider"></div>
+    <ul id="menu-deals">
+        <li ng-repeat="deal in deals">
+            <div class="deal-title">
+                <span class="deal-icon" data-icon="&#xe017;"></span>
+                <h2 class="toph2">{{deal.name}}</h2>
+            </div>
+            <p class="deal-exp">{{deal.coupon}}</p>
+            <a class="button button-assertive button-helper" ng-click="showDeal('{{deal.link}}')" style="margin-bottom:10px;">Shop Now</a>
+        </li>
+    </ul>
+</article>

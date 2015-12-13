@@ -1,0 +1,30 @@
+<ion-view title='<img class="title-image" src="img/logo.png" />'>
+    <ion-content>
+        <article id="secundary" style="padding-top: 0px;">
+            <section id="hero">
+                <img src="img/share-referr.jpg" alt="Share">
+                    </section>
+            <section id="regular">
+                <h2>Share your support!</h2>
+                <ul id="share-list">
+                    <li>
+                        <a ng-click="facebookShare()" class="square-facebook"><span data-icon="&#xe093;"></span></a>
+                    </li>
+                    <li>
+                        <a ng-click="twitterShare()" class="square-twitter"><span data-icon="&#xe094;"></span></a>
+                    </li>
+<!--                                        <li>
+                       <a href="" class="square-pinterest"><span data-icon="&#xe095;"></span></a>
+                   </li>-->
+                    <li>
+                        <a ng-click="emailShare()" class="square-email"><span data-icon="&#xe076;"></span></a>
+                    </li>
+                </ul>
+                <div class="divider"></div>
+                <h2>Refer a friend</h2>
+                <a class="button button-positive button-helper copy-referral" ng-click="copy()" style="width: 65% !important">COPY REFERRAL LINK</a>
+                <p class="code">{{reflink}}</p>
+            </section>
+        </article>
+    </ion-content>
+</ion-view>

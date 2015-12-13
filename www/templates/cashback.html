@@ -1,0 +1,29 @@
+<ion-view>
+    <ion-content>
+
+        <article id="setCashback">
+            <section>
+                
+                <div class="cashback-close">
+                    <a data-icon="&#x4d;" class="show-home" ui-sref="menu.tabs.topstores"></a>
+                </div>
+                
+                <h1>Set Cash Back %</h1>
+                <div id="set-cashback-content">
+                    <h4>Split your earnings between <br/>you and your school</h4>
+                    <div id="slider2" class="range range-calm">
+                        <input type="range" id="slider-2" min="0" max="100" step="5" value="50" data-hightlight="true"/>
+                    </div>
+                    <div class="your-half">
+                        <p>You keep <span id="sliderValue"></span>%</p>
+                    </div>
+                    <div class="schools-half">
+                        <p>Your school gets <span id="schoolValue"></span>%</p>
+                    </div>
+                </div>
+                <a ng-click="save();" class="button button-positive button-helper">Save</a>
+            </section>
+        </article>
+
+    </ion-content>
+</ion-view>

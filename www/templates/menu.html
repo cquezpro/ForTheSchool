@@ -1,0 +1,73 @@
+<ion-side-menus>
+
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-stable">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content> 
+
+    <ion-side-menu side="left">
+        <ion-header-bar class="bar-stable" style="background:#f8f8f8 !important; border-bottom:1px solid #eee">
+            <h1 class="title">My Account</h1>
+        </ion-header-bar>
+        <ion-content>
+            
+            <article id="menu">
+                <h2>Hi <span>{{user.firstname}} {{user.lastname}}</span>!</h2>
+                <div class="divider"></div>
+                
+                <h3 class="toph3" ng-show="user.group_id">You are supporting <a nav-clear menu-close ui-sref="schoolsearch.main">Edit</a></h3>
+                <h3 class="toph3" ng-hide="user.group_id">No school selected <a nav-clear menu-close ui-sref="schoolsearch.main">Search</a></h3>
+                <h2 class="toph2"><span>{{user.group_name}}</span></h2>
+                
+                <ul id="menu-stats">
+                    <li>Total Pending <span>${{user.cashback_pending}}<span></span></span></li>
+                    <li>Total Received <span>${{user.cashback_received}}<span></span></span></li>
+                </ul>
+                
+                <ion-list>
+                    <ion-item nav-clear menu-close ui-sref="menu.tabs.earnings">
+                        Earnings <span data-icon="&#x35;"></span>
+                    </ion-item>
+                    <ion-item nav-clear menu-close ui-sref="menu.tabs.update">
+                        Update Profile<span data-icon="&#x35;"></span>
+                    </ion-item>
+                    <ion-item nav-clear menu-close ui-sref="menu.tabs.favorites">
+                        Favorites<span data-icon="&#x35;"></span>
+                    </ion-item>
+                    <ion-item nav-clear menu-close ui-sref="menu.tabs.topstores">
+                        Top Stores<span data-icon="&#x35;"></span>
+                    </ion-item>
+                    <ion-item nav-clear menu-close ui-sref="menu.tabs.search">
+                        Search for Stores<span data-icon="&#x35;"></span>
+                    </ion-item>
+                    <ion-item nav-clear menu-close ui-sref="cashback">
+                        Set Cashback <span data-icon="&#x35;"></span>
+                    </ion-item>
+                    <ion-item nav-clear menu-close ui-sref="menu.tabs.faqs">
+                        FAQs <span data-icon="&#x35;"></span>
+                    </ion-item>
+                    <ion-item nav-clear menu-close ng-click="logout();">
+                        Logout <span data-icon="&#x35;"></span>
+                    </ion-item>
+                    
+                    <!-- TESTING PURPOSES -->
+                    <ion-item nav-clear menu-close ui-sref="newuser1">
+                        TEST for New User <span data-icon="&#x35;"></span>
+                    </ion-item>
+                    
+                </ion-list>
+            </article>
+                
+        </ion-content>
+    </ion-side-menu>
+    
+</ion-side-menus>

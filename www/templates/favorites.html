@@ -1,0 +1,18 @@
+<ion-view title='<img class="title-image" src="img/logo.png" />'>
+    <ion-content>
+        
+        <article id="secundary">
+            <h2>Favorites</h2>
+            <ul id="square-list" ng-show="favorites.length">
+                <li ng-repeat="f in favorites">
+                    <a class="square" ng-click="showStore({{f}});">
+                        <img src="{{f.image}}" alt="{{f.store_name}}">
+                        <p>{{f.discount_print}}</p>
+                    </a>
+                </li>
+            </ul>
+            <span ng-hide="favorites.length" class="no-favorites">You don't have any favorites</span>
+        </article>
+
+    </ion-content>
+</ion-view>

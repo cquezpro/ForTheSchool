@@ -1,0 +1,22 @@
+<ion-view title='<img class="title-image" src="img/logo.png" />'>
+    <ion-content class="padding">
+        <div id="updateContainer">
+            <h2 style="text-align:center;">Update Your Account</h2>
+            <form>
+                <div class="form-control">
+                    <input type="text" placeholder="First Name" ng-model="user.firstname"/>
+                    <input type="text" placeholder="Last Name" ng-model="user.lastname"/>
+                    <input type="text" placeholder="Email" ng-model="user.email"/>
+                    <input type="text" placeholder="Address Line 1" ng-model="user.address1"/>
+                    <input type="text" placeholder="Address Line 2" ng-model="user.address2"/>
+                    <input type="text" placeholder="City" ng-model="user.city"/>
+                    <select placeholder="State" ng-model="user.state">
+                        <option ng-repeat="state in states">{{state}}</option>
+                    </select>
+                    <input type="text" placeholder="Zip" ng-model="user.zip"/>
+                    <a href="" class="button button-positive button-helper" ng-click="update(user);">Update</a>
+                </div>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,27 @@
+<ion-view view-title="Search By Zip">
+    <ion-content class="padding">
+        <article id="secundary">
+
+            <section id="search" style="margin-top:-20px;">
+              <form>
+                <div class="form-control">
+                  <span class="form-icon" data-icon="&#x55;"></span>
+                  <input type="search" ng-model="searchfor" ng-change="search(searchfor)" placeholder="Search for a School">
+                </div>
+              </form>
+            </section>
+
+            <ul class="schoolsList">
+                <li ng-repeat="s in list">
+                    <a ng-click="supportSchool('{{s.id}}', '{{s.name}}');">
+                        <h3>{{s.name}}</h3>
+                        <p>{{s.main_city}}, {{s.main_state}} {{s.main_postal}}</p>
+                    </a>
+                </li>
+            </ul>
+            
+            <h2 ng-show="noSchools">No Schools Found</h2>
+            
+        </article>
+    </ion-content>
+</ion-view>

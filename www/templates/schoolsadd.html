@@ -1,0 +1,19 @@
+<ion-view view-title="Add Your School">
+    <ion-content class="padding">
+
+        <div id="newSchool">
+            <form>
+                <div class="form-control">
+                    <input type="text" ng-model="school.city" placeholder="School's city" />
+                    <select placeholder="School's state" ng-model="school.state">
+                        <option ng-repeat="state in states">{{state}}</option>
+                    </select>
+                    <input type="text" ng-model="school.zip" placeholder="School's zip"/>
+                    <input type="text" ng-model="school.name" placeholder="School's name" />
+                    <a class="button button-positive button-helper" ng-click="add(school)">Add School</a>
+                </div>
+            </form>
+        </div>
+
+    </ion-content>
+</ion-view>
